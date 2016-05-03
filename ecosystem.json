@@ -8,7 +8,7 @@
     // First application
     {
       name      : "API",
-      script    : "index.js",
+      script    : "finance.js",
       env: {
         COMMON_VARIABLE: "true"
       },
