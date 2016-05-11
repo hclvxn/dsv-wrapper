@@ -1,0 +1,78 @@
+/* this css file intended to be injected into the browser via a proxy */
+
+.tooltip-container {
+    /* position: absolute; */
+    /* border: 1px solid red; */
+}
+
+.tooltip {
+    /* height: 400px; */
+    width: 400px;
+    top: 275px;
+    left: 500px;
+
+    margin: 0;
+    overflow: hidden;
+    /* position: relative; */
+    position: absolute;
+    /* background-color: #779ECB; */
+    background-color: #aaa;
+    color: #fff;
+    /* transform: rotate3d(1, 0, 0, 90deg); */
+    opacity: 0;
+    transition: all 0.4s linear;
+    /* transition: all 2s linear; */
+    transform-style: preserve-3d;
+    transform-origin: 50% 0%;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
+    border: 3px solid #779ecb;
+    border-radius: 25px;
+    padding: 5px;
+    /* background: linear-gradient(#779ecb, #fff); */
+    /*
+    background-image:
+    -webkit-gradient(
+            linear, left top, left bottom,
+            from(rgba(0, 0, 0, 0)),
+            to(rgba(119, 158, 203, 1))
+        );
+*/
+    clip-path: circle(1px at center);
+    -webkit-clip-path: circle(1px at center);
+}
+
+.remove {
+    display: none;
+}
+
+.tooltip.show {
+    opacity: 1;
+    /* transform: rotate3d(1, 0, 0, 0deg); */
+    /* background: linear-gradient(#fff, #779ecb); */
+    /*
+    background-image:
+    -webkit-gradient(
+            linear, left top, left bottom,
+            from(rgba(119, 158, 203, 1)),
+            to(rgba(0, 0, 0, 0))
+        );
+*/
+    clip-path: circle(300px at center);
+    -webkit-clip-path: circle(300px at center);
+
+}
+
+/*
+.tooltip:before {
+    content: '';
+    box-shadow: inset 0px 164px 204px -6px rgba(0,0,0,0.68);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.tooltip.show:before {
+    box-shadow: inset 0px 164px 204px -6px rgba(11,1,1,0.68);
+}
+*/
