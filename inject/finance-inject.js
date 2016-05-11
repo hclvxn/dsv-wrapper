@@ -40,16 +40,16 @@ var showQuickShipmentInfo = function(event) {
     var result = JSON.parse(xhr.responseText);
     tooltip.classList.remove('remove');
     setTimeout(function() { tooltip.classList.add('show'); }, 1);
-    setChildText(tooltip, 'shipment-number', result.shipmentNumbers[0]);
-    setChildText(tooltip, 'mode', result.shipmentNumbers);
+    setChildText(tooltip, 'shipment-number', result.shipments[0].shipmentNbr);
+    setChildText(tooltip, 'mode', result.shipments[0].productTypeDescription);
   });
   // xhr.open('GET', 'https://sinupq10.go2uti.com:8443/api/v1/shipment/' +
   // xhr.withCredentials = true;
   xhr.open('GET', 'https://clientportal.tester@gmail.com:FooBar1@sinupq10.go2uti.com:8443/api/v1/shipment/' +
   // xhr.open('GET', '/shipment/' +
            shipmentNumber + '?shipmentFormat=' +
-           // 'DETAILS',
-           'SUMMARY',
+           'DETAILS',
+           // 'SUMMARY',
            true,
            'clientportal.tester@gmail.com',
            'FooBar1'
