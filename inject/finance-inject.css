@@ -6,7 +6,7 @@
 }
 
 .tooltip {
-    /* height: 400px; */
+    height: 100px;
     width: 400px;
     top: 275px;
     left: 500px;
@@ -40,6 +40,12 @@
 */
     clip-path: circle(1px at center);
     -webkit-clip-path: circle(1px at center);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .remove {
